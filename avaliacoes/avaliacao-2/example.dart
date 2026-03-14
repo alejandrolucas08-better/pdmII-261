@@ -8,13 +8,31 @@ class Pessoa {
 
   @override
   String toString() {
-    return "$nome ($idade anos)";
+    return "Pessoa(nome: $nome, idade: $idade)";
   }
 }
 
 void main() {
 
-  print("=== Pilha de inteiros ===");
+  print("====== PILHA DE OBJETOS (Pessoa) ======");
+
+  Pilha<Pessoa> pilhaPessoa = Pilha<Pessoa>();
+
+  pilhaPessoa.empilhar(Pessoa("Ana", 20));
+  pilhaPessoa.empilhar(Pessoa("Carlos", 25));
+  pilhaPessoa.empilhar(Pessoa("Marina", 30));
+
+  pilhaPessoa.mostrarPilha();
+  pilhaPessoa.mostrarTopo();
+  pilhaPessoa.desempilhar();
+  pilhaPessoa.mostrarPilha();
+}
+
+
+void main() {
+
+  print("====== PILHA DE INTEIROS ======");
+
   Pilha<int> pilhaInt = Pilha<int>();
 
   pilhaInt.empilhar(10);
@@ -22,9 +40,13 @@ void main() {
   pilhaInt.empilhar(30);
 
   pilhaInt.mostrarPilha();
+  pilhaInt.mostrarTopo();
+  pilhaInt.desempilhar();
+  pilhaInt.mostrarPilha();
 
 
-  print("\n=== Pilha de Strings ===");
+  print("\n====== PILHA DE STRINGS ======");
+
   Pilha<String> pilhaString = Pilha<String>();
 
   pilhaString.empilhar("A");
@@ -32,9 +54,13 @@ void main() {
   pilhaString.empilhar("C");
 
   pilhaString.mostrarPilha();
+  pilhaString.mostrarTopo();
+  pilhaString.desempilhar();
+  pilhaString.mostrarPilha();
 
 
-  print("\n=== Pilha de doubles ===");
+  print("\n====== PILHA DE DOUBLE ======");
+
   Pilha<double> pilhaDouble = Pilha<double>();
 
   pilhaDouble.empilhar(1.5);
@@ -42,14 +68,21 @@ void main() {
   pilhaDouble.empilhar(3.9);
 
   pilhaDouble.mostrarPilha();
+  pilhaDouble.mostrarTopo();
+  pilhaDouble.desempilhar();
+  pilhaDouble.mostrarPilha();
 
 
-  print("\n=== Pilha de objetos Pessoa ===");
-  Pilha<Pessoa> pilhaPessoa = Pilha<Pessoa>();
+  print("\n====== PILHA DE BOOLEAN ======");
 
-  pilhaPessoa.empilhar(Pessoa("Ana", 20));
-  pilhaPessoa.empilhar(Pessoa("Carlos", 25));
-  pilhaPessoa.empilhar(Pessoa("Maria", 30));
+  Pilha<bool> pilhaBool = Pilha<bool>();
 
-  pilhaPessoa.mostrarPilha();
+  pilhaBool.empilhar(true);
+  pilhaBool.empilhar(false);
+  pilhaBool.empilhar(true);
+
+  pilhaBool.mostrarPilha();
+  pilhaBool.mostrarTopo();
+  pilhaBool.desempilhar();
+  pilhaBool.mostrarPilha();
 }
