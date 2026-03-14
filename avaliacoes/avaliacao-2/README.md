@@ -6,8 +6,8 @@ Criado em: 24/02/2026
 1) Entender o funcionamento de uma Pilha;
 2) Implementar o código para definir uma Pilha;
 3) Implementar as funcionalidades:
-a) Mostrar  topo da Pilha;
-b) Empilhar;
-c) Desempilhar;
-d) Mostrar todos os elementos da Pilha.
-e) Entregar o código e um print da execução.
+- Mostrar  topo da Pilha;
+- Empilhar;
+- Desempilhar;
+- Mostrar todos os elementos da Pilha.
+- Entregar o código e um print da execução.
