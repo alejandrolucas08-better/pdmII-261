@@ -26,12 +26,8 @@ void main() {
   pilhaPessoa.mostrarTopo();
   pilhaPessoa.desempilhar();
   pilhaPessoa.mostrarPilha();
-}
 
-
-void main() {
-
-  print("====== PILHA DE INTEIROS ======");
+  print("\n====== PILHA DE INTEIROS ======");
 
   Pilha<int> pilhaInt = Pilha<int>();
 
@@ -49,9 +45,9 @@ void main() {
 
   Pilha<String> pilhaString = Pilha<String>();
 
-  pilhaString.empilhar("A");
-  pilhaString.empilhar("B");
-  pilhaString.empilhar("C");
+  pilhaString.empilhar("Alfa");
+  pilhaString.empilhar("Beta");
+  pilhaString.empilhar("Gama");
 
   pilhaString.mostrarPilha();
   pilhaString.mostrarTopo();
