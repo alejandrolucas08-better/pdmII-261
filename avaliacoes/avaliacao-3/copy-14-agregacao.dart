@@ -68,10 +68,9 @@ void main() {
   List<Funcionario> funcionarios = [func1, func2, func3];
 
   // 5. Criar um objeto Equipe Projeto chamando o metodo
-  //    contrutor que da nome ao projeto e insere uma
-  //    coleção de funcionario
   EquipeProjeto equipe = EquipeProjeto("Projeto Melhores Meias", funcionarios);
 
   // 6. Printar no formato JSON o objeto Equipe Projeto.
-  print(jsonEncode(equipe.toJson()));
+  JsonEncoder encoder = JsonEncoder.withIndent('  ');
+  print(encoder.convert(equipe.toJson()));
 }
