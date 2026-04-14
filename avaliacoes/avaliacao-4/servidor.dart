@@ -33,7 +33,7 @@ void handleConnection(Socket client) {
         .listen(
         (data) {
         final timestamp = DateTime.now().toString().split('.').first;
-        print('[$timestamp] Leitura recebida de $clientInfo: \n$data°C\n');
+        print('\n[$timestamp] Leitura recebida de $clientInfo: $data°C');
     },
     onError: (error) {
         print('Erro na conexão com $clientInfo: $error');

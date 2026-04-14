@@ -18,7 +18,7 @@ void main() async {
         Timer.periodic(Duration(seconds: 10), (timer) {
           
           // Lógica para encerrar após 5 minutos
-          if (timer.tick > 30) { // 30 execuções * 10 seg = 300 seg (5 min)
+          if (timer.tick > 6) { // 30 execuções * 10 seg = 300 seg (5 min)
             print('Encerrando monitoramento...');
             timer.cancel();
             socket.close();
