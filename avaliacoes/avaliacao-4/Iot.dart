@@ -16,25 +16,25 @@ void main() async {
             
         // Timer.periodic: Cria um loop assíncrono que não bloqueia o programa
         // Executa a função de callback a cada 10 segundos
-        Timer.periodic(Duration(seconds: 10), (timer) {
-              
-        // Lógica para encerrar após 1 minutos
-        if (timer.tick > 6) { // 6 execuções * 10 seg = 60 seg (1 min)
-            print('Encerrando monitoramento...');
-            timer.cancel();
-            socket.close();
-            return;
-        }
+        Timer.periodic(Duration(seconds: 10), (timer) { 
         
-        // Simulação de leitura do sensor usando números aleatórios
-        double temp = minTemp + Random().nextDouble() * (maxTemp - minTemp);
-
-        // Formata o número para 1 casa decimal e converte para String
-        String payload = temp.toStringAsFixed(1);
+            // Lógica para encerrar após 1 minutos
+            if (timer.tick > 6){ 
+                print('Encerrando monitoramento...');
+                timer.cancel();
+                socket.close();
+                return;
+            }
+        
+            // Simulação de leitura do sensor usando números aleatórios
+            double temp = minTemp + Random().nextDouble() * (maxTemp - minTemp);
     
-              
-        // Envia os dados via socket (serão recebidos como bytes pelo servidor)
-        socket.write(payload);
+            // Formata o número para 1 casa decimal e converte para String
+            String payload = temp.toStringAsFixed(1);
+        
+                  
+            // Envia os dados via socket (serão recebidos como bytes pelo servidor)
+            socket.write(payload);
         });
     
     } catch (e) {

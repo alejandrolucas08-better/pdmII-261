@@ -17,7 +17,7 @@ void main() async {
         await for (Socket client in server) {
           handleConnection(client);
         }
-    }catch (e) {
+    } catch (e) {
         print('Erro no servidor: $e');
     }
 }
@@ -34,18 +34,18 @@ void handleConnection(Socket client) {
         .transform(utf8.decoder) // Decodificador: transforma bytes (UTF-8) em texto (String)
         .listen(
         (data) {
-        // Callback disparado sempre que o sensor envia uma nova temperatura
-        final timestamp = DateTime.now().toString().split('.').first;
-        print('\n[$timestamp] Leitura recebida de $clientInfo: $data°C');
-    },
-    onError: (error) {
-        print('Erro na conexão com $clientInfo: $error');
-        client.close(); // Fecha o socket em caso de falha para liberar recursos
-    },
-    onDone: () {
-        // Disparado quando o sensor encerra a conexão (ex: após os 5 min)
-        print('--- Dispositivo $clientInfo desconectado ---\n');
-        client.close();
-    },
-  );
+            // Callback disparado sempre que o sensor envia uma nova temperatura
+            final timestamp = DateTime.now().toString().split('.').first;
+            print('\n[$timestamp] Leitura recebida de $clientInfo: $data°C');
+            },
+            onError: (error) {
+                print('Erro na conexão com $clientInfo: $error');
+                client.close(); // Fecha o socket em caso de falha para liberar recursos
+            },
+            onDone: () {
+                // Disparado quando o sensor encerra a conexão (ex: após os 5 min)
+                print('--- Dispositivo $clientInfo desconectado ---\n');
+                client.close();
+            },
+        );
 }
