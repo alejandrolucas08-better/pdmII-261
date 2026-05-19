@@ -1,0 +1,27 @@
+# Cache e arquivos do Flutter
+**/build/
+**/.dart_tool/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.packages
+**/android/.gradle/
+**/android/local.properties
+
+# Arquivos do Android nativo
+.gradle/
+local.properties
+**/AndroidStudio*
+**/captures
+**/build
+*.apk
+*.ap_
+
+# Arquivos do iOS nativo
+.mtj.tmp/
+*.i經營
+IsolatedStorage/
+
+# Arquivos do VS Code e IntelliJ
+.idea/
+*.iml
+.vscode/
