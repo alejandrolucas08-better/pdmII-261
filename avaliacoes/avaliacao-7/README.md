@@ -1,6 +1,6 @@
 # Avaliação 07
 
-Criado em: 24/02/2026
+Criado em: 1/05/2026
 
 ##  Widgets da Tela Inicial no Android
 - Fazer o codelab abaixo.
