@@ -1,0 +1,11 @@
+{
+  "name": "Avaliacao 09",
+  "short_name": "Avaliacao 09",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00897b",
+  "description": "Aplicacao Flutter para consumo de API REST.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false
+}
